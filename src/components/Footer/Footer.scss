@@ -1,0 +1,30 @@
+.Footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: $color-bg-dark;
+
+    @media (max-width: $breakpoint-width) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 28px 40px;
+        display: inline-flex;
+        list-style: none;
+    }
+
+    &__link {
+        margin-left: 30px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
