@@ -24,7 +24,7 @@ $font-family-Teko: 'Teko', sans-serif;
   font-family: $font-family-Roboto;
 
   @if $size == "sm" {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   @if $size == "md" {

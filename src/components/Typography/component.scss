@@ -1,0 +1,32 @@
+.default {
+	margin: 0;
+	font-weight: normal;
+}
+
+.Typography {
+    @include fontText("md");
+	@extend .default;
+
+	&--bold {
+		font-weight: bold !important;
+	}
+
+	&--italic {
+		font-style: italic;
+	}
+
+	&__title {
+		@include fontTitle("md");
+		@extend .default;
+	}
+
+	&__subtitle {
+		@include fontTitle("sm");
+		@extend .default;
+	}
+
+	&__helper {
+		@include fontText("sm");
+		@extend .default;
+	}
+}

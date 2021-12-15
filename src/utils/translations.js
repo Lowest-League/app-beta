@@ -5,7 +5,7 @@ export const translations = [
 		footer: {
 			help: 'Do you wanna help us?',
 			contact: 'Contact us',
-		}
+		},
 	},
 	{
 		id: 'french',
@@ -13,7 +13,7 @@ export const translations = [
 		footer: {
 			help: 'Tu veux nous aider?',
 			contact: 'Contacter',
-		}
+		},
 	},
 	{
 		id: 'portuguese',
@@ -21,7 +21,7 @@ export const translations = [
 		footer: {
 			help: 'Quer nos ajudar?',
 			contact: 'Contato',
-		}
+		},
 	},
 	{
 		id: 'spanish',
@@ -29,6 +29,6 @@ export const translations = [
 		footer: {
 			help: '¿Quieres ayudarnos?',
 			contact: 'Contacto',
-		}
+		},
 	},
 ];

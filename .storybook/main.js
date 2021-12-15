@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    stories: ["../src/components/**/*.story.jsx"],
-    addons: ["@storybook/addon-postcss"],
+	stories: ['../src/components/**/*.story.jsx'],
+	addons: ['@storybook/addon-postcss'],
 	webpackFinal: async (config) => {
 		config.resolve.alias = {
-			'@styles': path.resolve(__dirname, '../src/styles')
+			'@styles': path.resolve(__dirname, '../src/styles'),
 		};
 
 		config.module.rules.push({
@@ -13,11 +13,11 @@ module.exports = {
 			use: [
 				{ loader: 'style-loader' },
 				{ loader: 'css-loader' },
-				{ loader: 'sass-loader', options: { additionalData: '@import "~@styles/global.scss";' } }
+				{ loader: 'sass-loader', options: { additionalData: '@import "~@styles/global.scss";' } },
 			],
-			include: path.resolve(__dirname, "../")
-		  });
+			include: path.resolve(__dirname, '../'),
+		});
 
-		  return config;
-	}
+		return config;
+	},
 };
