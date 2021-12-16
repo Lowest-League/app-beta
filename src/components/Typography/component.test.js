@@ -5,10 +5,12 @@ import '@testing-library/jest-dom';
 // COMPONENTS
 import Typography from './component';
 
-let component = (props) => <Typography {...props} />;
+let component;
 const types = ['title', 'subtitle', 'helper', ''];
 
 describe('Typography', () => {
+	beforeEach(() => component = props => <Typography {...props} />);
+	afterEach(() => component = null);
 	it('should render', () => {
 		const props = {
 			id: 'jest',

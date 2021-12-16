@@ -5,8 +5,8 @@
 	"scripts": {
 		"run:dev": "webpack-dev-server --host 0.0.0.0 --mode development --open",
 		"stories": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook --port 9090",
-		"test:all": "jest --collect-coverage --verbose=true --config ./jest.config.json",
-		"test:watch": "jest --watch --collect-coverage --verbose=true --config ./jest.config.json",
+		"test:all": "jest --coverage --verbose=true --config ./jest.config.json",
+		"test:watch": "jest --watchAll --coverage --verbose=true --config ./jest.config.json",
 		"build": "webpack --config webpack.config.js --mode production",
 		"lint": "prettier --write '**/*.js' '**/*.jsx' '**/*.test.js'",
 		"prepare": "husky install"
