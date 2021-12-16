@@ -4,34 +4,34 @@ $font-family-Lato: 'Lato', sans-serif;
 $font-family-Poppins: 'Poppins', sans-serif;
 $font-family-Teko: 'Teko', sans-serif;
 
-@mixin fontText($size: "sm") {
-  font-family: $font-family-Roboto;
+@mixin fontText($size: 'sm') {
+	font-family: $font-family-Roboto;
 
-  @if $size == "sm" {
-    font-size: 12px;
-  }
+	@if $size == 'sm' {
+		font-size: 12px;
+	}
 
-  @if $size == "md" {
-    font-size: 16px;
-  }
+	@if $size == 'md' {
+		font-size: 16px;
+	}
 
-  @if $size == "lg" {
-    font-size: 20px;
-  }
+	@if $size == 'lg' {
+		font-size: 20px;
+	}
 }
 
-@mixin fontTitle($size: "sm") {
-  font-family: $font-family-Roboto;
+@mixin fontTitle($size: 'sm') {
+	font-family: $font-family-Roboto;
 
-  @if $size == "sm" {
-    font-size: 28px;
-  }
+	@if $size == 'sm' {
+		font-size: 28px;
+	}
 
-  @if $size == "md" {
-    font-size: 48px;
-  }
+	@if $size == 'md' {
+		font-size: 48px;
+	}
 
-  @if $size == "lg" {
-    font-size: 64px;
-  }
+	@if $size == 'lg' {
+		font-size: 64px;
+	}
 }

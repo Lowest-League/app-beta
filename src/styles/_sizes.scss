@@ -1,25 +1,27 @@
-@function size($size: "md") {
+@function size($size: 'md') {
+	@if $size == 'xxs' {
+		@return 2px;
+	}
 
-  @if $size == "xs" {
-    @return 4px;
-  }
+	@if $size == 'xs' {
+		@return 4px;
+	}
 
-  @if $size == "sm" {
-    @return 8px;
-  }
+	@if $size == 'sm' {
+		@return 8px;
+	}
 
-  @if $size == "md" {
-    @return 16px;
-  }
+	@if $size == 'md' {
+		@return 16px;
+	}
 
-  @if $size == "lg" {
-    @return 24px;
-  }
+	@if $size == 'lg' {
+		@return 24px;
+	}
 
-  @if $size == "xg" {
-    @return 32px;
-  }
-
+	@if $size == 'xg' {
+		@return 32px;
+	}
 }
 
 $breakpoint-width: 600px;

@@ -4,7 +4,7 @@
 }
 
 .Typography {
-    @include fontText("md");
+	@include fontText('md');
 	@extend .default;
 
 	&--bold {
@@ -16,17 +16,17 @@
 	}
 
 	&__title {
-		@include fontTitle("md");
+		@include fontTitle('md');
 		@extend .default;
 	}
 
 	&__subtitle {
-		@include fontTitle("sm");
+		@include fontTitle('sm');
 		@extend .default;
 	}
 
 	&__helper {
-		@include fontText("sm");
+		@include fontText('sm');
 		@extend .default;
 	}
 }
