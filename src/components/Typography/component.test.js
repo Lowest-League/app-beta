@@ -9,8 +9,8 @@ let component;
 const types = ['title', 'subtitle', 'helper', ''];
 
 describe('Typography', () => {
-	beforeEach(() => component = props => <Typography {...props} />);
-	afterEach(() => component = null);
+	beforeEach(() => (component = (props) => <Typography {...props} />));
+	afterEach(() => (component = null));
 	it('should render', () => {
 		const props = {
 			id: 'jest',
