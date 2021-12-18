@@ -1,9 +1,13 @@
 // MAIN COLORS
-$color-primary: #61dafb;
+$color-primary: rgb(97, 218, 251); // #61dafb;
+$color-secondary: #61dafb;
 
 // BASE COLORS
-$color-dark: #313131;
-$color-light: #ffffff;
+$color-dark: rgb(49, 49, 49); // #313131
+$color-light: rgb(255, 255, 255); // #FFFFFF
+$color-grey-1: rgb(112, 112, 112); // #707070
+$color-grey-2: rgb(179, 179, 179); // #B3B3B3
+$color-grey-3: rgb(240, 240, 240); // #EBEBEB
 
 // BACKGROUND COLORS
 $color-bg-dark: $color-dark;
@@ -12,3 +16,7 @@ $color-bg-light: $color-light;
 // TEXT COLORS
 $color-text-dark: $color-dark;
 $color-text-light: $color-light;
+
+// COMPONENTS
+$color-button-hover: rgba($color-primary, 0.7);
+$color-button-light-hover: rgba($color-grey-3, 0.7);
