@@ -1,6 +1,6 @@
 // MAIN COLORS
-$color-primary: rgb(97, 218, 251); // #61dafb;
-$color-secondary: #61dafb;
+$color-primary-blue: rgb(97, 218, 251); // #61dafb;
+$color-primary-green: rgb(0,255,133); // #00FF85;
 
 // BASE COLORS
 $color-dark: rgb(49, 49, 49); // #313131
@@ -16,8 +16,9 @@ $color-bg-light: $color-light;
 // TEXT COLORS
 $color-text-dark: $color-dark;
 $color-text-light: $color-light;
-
 // COMPONENTS
-$color-button-hover: rgba($color-primary, 0.7);
+$color-gradient-primary: linear-gradient(90deg, $color-primary-blue, $color-primary-green);
+
+$color-button-hover: rgba($color-primary-blue, 0.7);
 $color-button-light-hover: rgba($color-grey-3, 0.7);
 $color-button-disabled: $color-grey-2;
