@@ -5,14 +5,18 @@
 	max-width: 200px;
 	border-width: size('xxs');
 	border-style: solid;
-	border-color: $color-primary;
-	background-color: $color-primary;
+	border-color: transparent;
+	border-left-color: $color-primary-blue;
+	border-right-color: $color-primary-green;
+	background: $color-gradient-primary;
 	color: $color-light;
 	cursor: pointer;
 	box-shadow: none;
 
 	&:hover {
-		background-color: $color-button-hover;
+		background: $color-gradient-primary-invert;
+		border-left-color: $color-primary-green;
+		border-right-color: $color-primary-blue;
 	}
 
 	&:active {
@@ -20,8 +24,9 @@
 	}
 
 	&--secondary {
-		background-color: $color-light;
-		color: $color-primary;
+		background: $color-light;
+		border-color: $color-primary-blue;
+		color: $color-primary-blue;
 
 		&:hover {
 			background-color: $color-button-light-hover;
@@ -30,7 +35,7 @@
 
 	&--disabled {
 		border-color: $color-button-disabled !important;
-		background-color: $color-button-disabled;
+		background: $color-button-disabled;
 		color: $color-text-light;
 		pointer-events: none;
 	}

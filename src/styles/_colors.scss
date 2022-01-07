@@ -18,6 +18,7 @@ $color-text-dark: $color-dark;
 $color-text-light: $color-light;
 // COMPONENTS
 $color-gradient-primary: linear-gradient(90deg, $color-primary-blue, $color-primary-green);
+$color-gradient-primary-invert: linear-gradient(90deg, $color-primary-green, $color-primary-blue);
 
 $color-button-hover: rgba($color-primary-blue, 0.7);
 $color-button-light-hover: rgba($color-grey-3, 0.7);
