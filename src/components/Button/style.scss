@@ -29,13 +29,14 @@
 		color: $color-primary-blue;
 
 		&:hover {
-			background-color: $color-button-light-hover;
+			background: $color-grey-3;
+			border-color: $color-primary-blue;
 		}
 	}
 
 	&--disabled {
-		border-color: $color-button-disabled !important;
-		background: $color-button-disabled;
+		border-color: $color-grey-2 !important;
+		background: $color-grey-2;
 		color: $color-text-light;
 		pointer-events: none;
 	}
