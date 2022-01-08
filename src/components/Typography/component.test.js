@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 import Typography from './component';
 
 let component;
-const types = ['title', 'subtitle', 'helper', ''];
+const types = ['title', 'subtitle', 'subtext'];
 
 describe('Typography', () => {
 	beforeEach(() => (component = (props) => <Typography {...props} />));
@@ -58,11 +58,11 @@ describe('Typography', () => {
 		expect(container.querySelector('h2')).toBeTruthy();
 	});
 
-	it('should render a helper', () => {
+	it('should render a subtext', () => {
 		const props = {
 			id: 'jest',
 			content: 'Typography helper',
-			type: 'helper',
+			type: 'subtext',
 		};
 
 		const componentId = `typography-${props.id}`;

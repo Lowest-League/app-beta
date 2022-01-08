@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 // STYLE
-import './component.scss';
+import './style.scss';
 
 const Typography = (props) => {
 	const { id, content, type, bold, italic } = props;
@@ -35,19 +35,7 @@ const Typography = (props) => {
 				{content}
 			</h2>
 		),
-		helper: (
-			<p
-				className={classnames('Typography__helper', {
-					'Typography--bold': bold,
-					'Typography--italic': italic,
-				})}
-				id={componentId}
-				data-testid={componentId}
-			>
-				{content}
-			</p>
-		),
-		default: (
+		text: (
 			<p
 				className={classnames('Typography', {
 					'Typography--bold': bold,
@@ -59,7 +47,19 @@ const Typography = (props) => {
 				{content}
 			</p>
 		),
-	}[type || 'default'];
+		subtext: (
+			<p
+				className={classnames('Typography__subtext', {
+					'Typography--bold': bold,
+					'Typography--italic': italic,
+				})}
+				id={componentId}
+				data-testid={componentId}
+			>
+				{content}
+			</p>
+		),
+	}[type || 'text'];
 
 	return component;
 };
@@ -67,7 +67,7 @@ const Typography = (props) => {
 Typography.prototypes = {
 	id: PropTypes.string.isRequired,
 	content: PropTypes.string,
-	type: PropTypes.oneOf(['title', 'subtitle', 'helper']),
+	type: PropTypes.oneOf(['title', 'subtitle', 'text', 'subtext']),
 	bold: PropTypes.bool,
 	italic: PropTypes.bool,
 };

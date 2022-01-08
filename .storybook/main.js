@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 	stories: ['../src/components/**/*.story.jsx'],
-	addons: ['@storybook/addon-postcss'],
+	addons: ['@storybook/addon-postcss', '@storybook/addon-controls'],
 	webpackFinal: async (config) => {
 		config.resolve.alias = {
 			'@styles': path.resolve(__dirname, '../src/styles'),

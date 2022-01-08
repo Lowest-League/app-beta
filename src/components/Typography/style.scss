@@ -25,7 +25,7 @@
 		@extend .default;
 	}
 
-	&__helper {
+	&__subtext {
 		@include fontText('sm');
 		@extend .default;
 	}
