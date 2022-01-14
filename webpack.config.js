@@ -30,7 +30,7 @@ module.exports = {
 				use: [
 					{ loader: 'style-loader' },
 					{ loader: 'css-loader' },
-					{ loader: 'sass-loader', options: { data: '@import "~@styles/global.scss";' } },
+					{ loader: 'sass-loader', options: { additionalData: '@import "~@styles/global.scss";' } },
 				],
 			},
 			{
