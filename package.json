@@ -3,12 +3,12 @@
 	"version": "0.0.1",
 	"main": "index.js",
 	"scripts": {
-		"run:dev": "webpack-dev-server --host 0.0.0.0 --mode development --open",
-		"stories": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook --port 9090",
+		"run:dev": "webpack-dev-server --host 0.0.0.0 --port 9090 --mode development --open",
+		"stories": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook --port 9091",
 		"test:all": "jest --coverage --verbose=true --config ./jest.config.json",
 		"test:watch": "jest --watchAll --coverage --verbose=true --config ./jest.config.json",
 		"build": "webpack --config webpack.config.js --mode production",
-		"lint": "prettier --write '**/*.js' '**/*.jsx' '**/*.test.js' '**/*.scss'",
+		"lint": "prettier --write '**/*.js' '**/*.jsx' '**/*.test.js' '**/*.scss' '**/*.html'",
 		"prepare": "husky install"
 	},
 	"dependencies": {
