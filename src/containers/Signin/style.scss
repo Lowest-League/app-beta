@@ -23,7 +23,7 @@ $mobile-max-width: 280px;
 	}
 
 	&__button {
-		max-width: $mobile-max-width/2;
+		max-width: calc($mobile-max-width/2);
 		padding-bottom: spacing('lg');
 
 		@media (max-width: $breakpoint-mobile) {

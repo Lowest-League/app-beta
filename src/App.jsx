@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 // STYLE
 import './app.scss';
@@ -8,9 +9,10 @@ import { Login } from '@pages';
 
 const App = () => {
 	return (
-		<div>
-			<Login src="/" />
-		</div>
+		<Routes>
+			<Route path="/" element={<Login src="/" />} />
+			<Route path="*" element={<Login src="/" />} />
+		</Routes>
 	);
 };
 
