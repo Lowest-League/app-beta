@@ -1,11 +1,7 @@
-// FONT FAMILY
-$font-family-Roboto: 'Roboto', sans-serif;
-$font-family-Lato: 'Lato', sans-serif;
-$font-family-Poppins: 'Poppins', sans-serif;
-$font-family-Teko: 'Teko', sans-serif;
+$font-family: 'Nunito', sans-serif;
 
 @mixin fontText($size: 'sm') {
-	font-family: $font-family-Roboto;
+	font-family: $font-family;
 
 	@if $size == 'sm' {
 		font-size: 12px;
@@ -21,7 +17,7 @@ $font-family-Teko: 'Teko', sans-serif;
 }
 
 @mixin fontTitle($size: 'sm') {
-	font-family: $font-family-Roboto;
+	font-family: $font-family;
 
 	@if $size == 'sm' {
 		font-size: 28px;
