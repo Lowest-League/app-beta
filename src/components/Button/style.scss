@@ -6,8 +6,8 @@
 	border-width: size('xxs');
 	border-style: solid;
 	border-color: transparent;
-	border-left-color: $color-primary-blue;
-	border-right-color: $color-primary-green;
+	border-left-color: $color-blue-dark;
+	border-right-color: $color-green-light;
 	background: $color-gradient-primary;
 	color: $color-light;
 	cursor: pointer;
@@ -15,8 +15,8 @@
 
 	&:hover {
 		background: $color-gradient-primary-invert;
-		border-left-color: $color-primary-green;
-		border-right-color: $color-primary-blue;
+		border-left-color: $color-green-light;
+		border-right-color: $color-blue-dark;
 	}
 
 	&:active {
@@ -25,12 +25,12 @@
 
 	&--secondary {
 		background: $color-light;
-		border-color: $color-primary-blue;
-		color: $color-primary-blue;
+		border-color: $color-blue-dark;
+		color: $color-blue-dark;
 
 		&:hover {
 			background: $color-grey-3;
-			border-color: $color-primary-blue;
+			border-color: $color-blue-dark;
 		}
 	}
 

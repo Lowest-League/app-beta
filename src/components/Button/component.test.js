@@ -6,30 +6,28 @@ import '@testing-library/jest-dom';
 import Button from './component';
 
 let component;
+const defaultProps = {
+	id: 'jest',
+	label: 'Button label',
+};
 
 describe('Button', () => {
-	beforeEach(() => (component = (props) => <Button {...props} />));
-	afterEach(() => (component = null));
+	beforeAll(() => (component = (props) => <Button {...props} />));
+	afterAll(() => (component = null));
 
 	it('should render', () => {
-		const props = {
-			id: 'jest',
-			label: 'Button label',
-		};
-
-		const componentId = `button-${props.id}`;
-		const { getByTestId, container } = render(component(props));
+		const componentId = `button-${defaultProps.id}`;
+		const { getByTestId, container } = render(component(defaultProps));
 
 		expect(getByTestId(componentId)).toBeTruthy();
-		expect(getByTestId(componentId).textContent).toBe(props.label);
+		expect(getByTestId(componentId).textContent).toBe(defaultProps.label);
 		expect(container.querySelector('button')).toBeTruthy();
 	});
 
 	it('should trigger event', () => {
 		const click = jest.fn();
 		const props = {
-			id: 'jest',
-			label: 'Button label',
+			...defaultProps,
 			onClick: () => click(),
 		};
 
@@ -43,8 +41,7 @@ describe('Button', () => {
 	it('should been disabled', () => {
 		const click = jest.fn();
 		const props = {
-			id: 'jest',
-			label: 'Button label',
+			...defaultProps,
 			disabled: true,
 			onClick: () => click(),
 		};
@@ -60,8 +57,7 @@ describe('Button', () => {
 
 	it('should apply secondary styling', () => {
 		const props = {
-			id: 'jest',
-			label: 'Button label',
+			...defaultProps,
 			secondary: true,
 		};
 
@@ -74,8 +70,7 @@ describe('Button', () => {
 
 	it('should render helper text', () => {
 		const props = {
-			id: 'jest',
-			label: 'Button label',
+			...defaultProps,
 			helper: 'Button helper',
 		};
 

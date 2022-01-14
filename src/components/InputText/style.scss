@@ -1,0 +1,50 @@
+.InputText {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: $color-light;
+
+	&__label {
+		padding-left: spacing('sm');
+		color: $color-dark;
+
+		&--disabled {
+			color: $color-disabled;
+		}
+	}
+
+	&__field {
+		padding: spacing('sm');
+		@include fontText('md');
+		border: none;
+		border-bottom: 1px solid $color-dark;
+		outline: none;
+
+		&:focus {
+			border-color: $color-blue-dark;
+			background: $color-grey-3;
+			color: $color-blue-dark;
+		}
+
+		&--error {
+			color: $color-red;
+			border-color: $color-red;
+		}
+
+		&--disabled {
+			color: $color-disabled;
+			border-color: $color-disabled;
+			pointer-events: none;
+		}
+	}
+
+	&__helper {
+		padding-left: spacing('sm');
+		margin-top: spacing('xs');
+		color: $color-dark;
+
+		&--error {
+			color: $color-red;
+		}
+	}
+}

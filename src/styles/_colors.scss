@@ -1,6 +1,8 @@
 // MAIN COLORS
-$color-primary-blue: rgb(97, 218, 251); // #61dafb;
-$color-primary-green: rgb(0, 255, 133); // #00FF85;
+$color-blue-light: rgb(97, 218, 251); // #61dafb
+$color-blue-dark: rgb(66 103 178); // #4267B2
+$color-green-light: rgb(0, 255, 133); // #00FF85
+$color-red: rgb(255 90 95); // #FF5A5F
 
 // BASE COLORS
 $color-dark: rgb(49, 49, 49); // #313131
@@ -18,5 +20,8 @@ $color-text-dark: $color-dark;
 $color-text-light: $color-light;
 
 // GRADIENTS
-$color-gradient-primary: linear-gradient(90deg, $color-primary-blue, $color-primary-green);
-$color-gradient-primary-invert: linear-gradient(90deg, $color-primary-green, $color-primary-blue);
+$color-gradient-primary: linear-gradient(90deg, $color-blue-dark, $color-green-light);
+$color-gradient-primary-invert: linear-gradient(90deg, $color-green-light, $color-blue-dark);
+
+// STATE COLORS
+$color-disabled: $color-grey-2;
