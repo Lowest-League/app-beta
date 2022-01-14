@@ -1,0 +1,18 @@
+.Signin {
+	max-width: 320px;
+
+	&__title {
+		color: $color-dark;
+		margin-bottom: spacing('lg');
+	}
+
+	&__form {
+		* > input {
+			margin-bottom: spacing('xl');
+		}
+	}
+
+	&__button {
+		padding-bottom: spacing('lg');
+	}
+}

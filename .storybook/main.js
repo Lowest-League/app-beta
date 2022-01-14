@@ -1,12 +1,13 @@
 const path = require('path');
 
 module.exports = {
-	stories: ['../src/components/**/*.story.jsx'],
+	stories: ['../src/components/**/*.story.jsx', '../src/containers/**/*.story.jsx'],
 	addons: ['@storybook/addon-postcss', '@storybook/addon-controls'],
 	webpackFinal: async (config) => {
 		config.resolve.alias = {
 			'@styles': path.resolve(__dirname, '../src/styles'),
 			'@components': path.resolve(__dirname, '../src/components'),
+			'@containers': path.resolve(__dirname, '../src/containers'),
 		};
 
 		config.module.rules.push({

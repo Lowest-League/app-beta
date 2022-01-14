@@ -9,7 +9,7 @@ import './style.scss';
 import { Typography } from '@components';
 
 const Button = (props) => {
-	const { id, label, secondary, disabled, onClick, helper } = props;
+	const { id, label, secondary, disabled, onClick, helper, submit } = props;
 
 	const componentId = `button-${id}`;
 
@@ -29,6 +29,8 @@ const Button = (props) => {
 				id={componentId}
 				data-testid={componentId}
 				onClick={disabled ? null : onClick}
+				type={submit ? 'submit' : 'button'}
+				form={submit || null}
 			>
 				<Typography id={componentId} content={label} bold />
 			</button>
@@ -44,6 +46,7 @@ Button.prototypes = {
 	disabled: PropTypes.bool,
 	onClick: PropTypes.func,
 	helper: PropTypes.string,
+	submit: PropTypes.string,
 };
 
 export default Button;
