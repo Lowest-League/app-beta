@@ -1,21 +1,26 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import Button from './component';
 
-const stories = storiesOf('Button', module);
-
-const Props = {
-	id: 'storybook',
-	label: 'Storybook',
+export default {
+	title: 'Button',
+	component: Button,
+	argTypes: {
+		id: { control: 'text' },
+		label: { control: 'text' },
+		helper: { control: 'text' },
+		secondary: { control: 'boolean' },
+		disabled: { control: 'boolean' },
+	},
 };
 
-stories.add('Default', () => <Button {...Props} />);
-stories.add('Default - with helper', () => <Button {...Props} helper="Button helper" />);
+const Template = (args) => <Button {...args} />;
 
-stories.add('Secondary', () => <Button {...Props} secondary />);
-stories.add('Secondary - with helper', () => (
-	<Button {...Props} secondary helper="Button helper" />
-));
-
-stories.add('Disabled', () => <Button {...Props} disabled />);
-stories.add('Disabled - with helper', () => <Button {...Props} disabled helper="Button helper" />);
+export const Default = Template.bind({});
+Default.args = {
+	id: 'storybook',
+	label: 'Button',
+	helper: '',
+	secondary: false,
+	disabled: false,
+	onClick: () => console.log('Clicked.'),
+};
