@@ -31,7 +31,10 @@
 	}
 
 	&__mirror {
-		background: $color-gradient-primary;
+		background: url('../../assets/images/football-pitch.jpg'), $color-gradient-primary;
+		background-blend-mode: multiply;
+		background-size: cover;
+		background-repeat: no-repeat;
 
 		@media (max-width: $breakpoint-mobile) {
 			display: none;

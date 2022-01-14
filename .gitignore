@@ -2,3 +2,5 @@ node_modules/
 coverage
 .vscode/
 __snapshots__/
+.DS_Store
+src/.DS_Store
