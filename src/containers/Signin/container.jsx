@@ -31,8 +31,11 @@ const Signin = () => {
 
 	return (
 		<div className="Signin">
-			<div className="Signin__title">
-				<Typography id={containerId} content="Login into the LL" type="subtitle" />
+			<div className="Signin__header">
+				<Typography id={`${containerId}-header`} content="Login into the" type="subtitle" />
+				<div className="Signin__title">
+					<Typography id={`${containerId}-title`} content="Lowest League" type="subtitle" bold />
+				</div>
 			</div>
 			<form className="Signin__form" onSubmit={login} id="login-form">
 				<InputText id={`${containerId}-username`} label="Username" field={usernameField} />

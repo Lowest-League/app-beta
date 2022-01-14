@@ -14,7 +14,8 @@ describe('Signin', () => {
 		const containerId = 'signin';
 		const { getByTestId } = render(wrapper());
 
-		expect(getByTestId(`typography-${containerId}`)).toBeTruthy();
+		expect(getByTestId(`typography-${containerId}-header`)).toBeTruthy();
+		expect(getByTestId(`typography-${containerId}-title`)).toBeTruthy();
 		expect(getByTestId(`input-${containerId}-username`)).toBeTruthy();
 		expect(getByTestId(`input-${containerId}-password`)).toBeTruthy();
 		expect(getByTestId(`button-${containerId}`)).toBeTruthy();

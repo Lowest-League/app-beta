@@ -1,9 +1,19 @@
-.Signin {
-	max-width: 320px;
+$mobile-max-width: 280px;
 
-	&__title {
+.Signin {
+	width: 100%;
+
+	&__header {
 		color: $color-dark;
 		margin-bottom: spacing('lg');
+	}
+
+	&__title {
+		h2 {
+			background: $color-gradient-primary;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 
 	&__form {
@@ -13,6 +23,11 @@
 	}
 
 	&__button {
+		max-width: $mobile-max-width/2;
 		padding-bottom: spacing('lg');
+
+		@media (max-width: $breakpoint-mobile) {
+			max-width: 100%;
+		}
 	}
 }

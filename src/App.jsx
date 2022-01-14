@@ -4,12 +4,12 @@ import React from 'react';
 import './app.scss';
 
 // COMPONENTS
-import { Typography } from '@components';
+import { Login } from '@pages';
 
 const App = () => {
 	return (
 		<div>
-			<Typography id="app" content="Lowest League" type="title" />
+			<Login src="/" />
 		</div>
 	);
 };
