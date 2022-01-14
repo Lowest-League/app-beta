@@ -46,13 +46,18 @@
 		align-items: center;
 		position: fixed;
 		bottom: spacing('lg');
-		left: $horizontal-padding;
-		color: $color-dark;
+		right: $horizontal-padding;
+		color: $color-light;
 		text-decoration: none;
 		cursor: pointer;
 
 		svg {
 			margin-right: spacing('sm');
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			left: $horizontal-padding;
+			color: $color-dark;
 		}
 	}
 }
