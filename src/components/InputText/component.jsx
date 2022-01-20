@@ -28,7 +28,7 @@ const InputText = (props) => {
 			)}
 			<input
 				className={classnames('InputText__field', {
-					'InputText__field--error': error && !disabled,
+					'InputText__field--error': error.value && !disabled,
 					'InputText__field--disabled': disabled,
 				})}
 				id={`${componentId}-field`}
@@ -39,14 +39,24 @@ const InputText = (props) => {
 				placeholder={placeholder}
 				type={type}
 			/>
-			{error && helper && (
+			{helper && (
 				<span
 					className={classnames('InputText__helper', {
-						'InputText__helper--error': error && !disabled,
+						'InputText__helper--error': error.value && !disabled,
 					})}
 					data-testid={`${componentId}-helper`}
 				>
 					<Typography id={componentId} content={helper} italic type="subtext" />
+				</span>
+			)}
+			{error.value && error.message && (
+				<span
+					className={classnames('InputText__helper', {
+						'InputText__helper--error': error.value && !disabled,
+					})}
+					data-testid={`${componentId}-helper`}
+				>
+					<Typography id={componentId} content={error.message} italic type="subtext" />
 				</span>
 			)}
 		</div>
@@ -58,7 +68,10 @@ InputText.prototypes = {
 	label: PropTypes.string,
 	disabled: PropTypes.bool,
 	helper: PropTypes.string,
-	error: PropTypes.bool,
+	error: {
+		value: PropTypes.bool,
+		message: PropTypes.string,
+	},
 	placeholder: PropTypes.string,
 	type: PropTypes.oneOf(['password', 'text', 'number']),
 	field: PropTypes.shape({

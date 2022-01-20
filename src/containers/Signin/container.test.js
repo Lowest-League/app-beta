@@ -1,5 +1,7 @@
 // Signin test
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from '@store';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Signin from './container';
@@ -7,7 +9,14 @@ import Signin from './container';
 let wrapper;
 
 describe('Signin', () => {
-	beforeAll(() => (wrapper = () => <Signin />));
+	beforeAll(
+		() =>
+			(wrapper = () => (
+				<Provider store={store}>
+					<Signin />
+				</Provider>
+			))
+	);
 	afterAll(() => (wrapper = null));
 
 	it('should render', () => {

@@ -16,10 +16,8 @@ $mobile-max-width: 280px;
 		}
 	}
 
-	&__form {
-		* > input {
-			margin-bottom: spacing('xl');
-		}
+	&__input {
+		margin-bottom: spacing('xl');
 	}
 
 	&__button {
