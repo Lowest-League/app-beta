@@ -5,13 +5,13 @@ import { Routes, Route } from 'react-router-dom';
 import './app.scss';
 
 // COMPONENTS
+import { Modals } from '@containers';
 import { Login } from '@pages';
-import { Modal } from '@components';
 
 const App = () => {
 	return (
 		<>
-			<Modal visible={true} title="Test" />
+			<Modals />
 			<Routes>
 				<Route path="/" element={<Login src="/" />} />
 				<Route path="*" element={<Login src="/" />} />
