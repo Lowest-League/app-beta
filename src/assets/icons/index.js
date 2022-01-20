@@ -1,4 +1,2 @@
-export { ArrowLogo } from './arrow';
-export { GithubLogo } from './github';
-export { LinkedinLogo } from './linkedin';
-export { ReactLogo } from './react';
+export { default as FootballLogo } from './football';
+export { default as GithubLogo } from './github';

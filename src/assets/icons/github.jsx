@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const GithubLogo = (props) => {
+const GithubLogo = (props) => {
 	const { className, width, height, id } = props;
 
 	return (
@@ -25,3 +25,5 @@ export const GithubLogo = (props) => {
 		</svg>
 	);
 };
+
+export default GithubLogo;

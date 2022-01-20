@@ -10,7 +10,7 @@ import { signinRequest } from '../../store/modules/auth/requests';
 import { handleError } from '../../store/modules/auth/actions';
 
 // COMPONENTS
-import { Typography, InputText, Button } from '@components';
+import { Typography, InputText, Button, Loader } from '@components';
 
 const Signin = () => {
 	const dispatch = useDispatch();
@@ -53,7 +53,7 @@ const Signin = () => {
 		dispatch(signinRequest(body));
 	}
 
-	const loader = 'Loading...';
+	const loader = <Loader />;
 
 	const form = (
 		<div className="Signin">
