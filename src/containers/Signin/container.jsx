@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import './style.scss';
 
 // STORE
-import { signinRequest } from '../../store/modules/auth/requests';
-import { handleError } from '../../store/modules/auth/actions';
+import { signinRequest } from '@store/modules/auth/requests';
+import { handleError } from '@store/modules/auth/actions';
 
 // COMPONENTS
 import { Typography, InputText, Button, Loader } from '@components';

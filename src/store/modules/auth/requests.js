@@ -1,4 +1,5 @@
 import { SIGNIN } from '../../../api';
+import { handleModal } from '@store/modules/modals/actions';
 import * as authActions from './actions';
 
 export const signinRequest = (body) => {
@@ -8,7 +9,7 @@ export const signinRequest = (body) => {
 			.then((res) => {
 				const response = res.data;
 				window.localStorage.setItem('lowestLeagueToken', response.data);
-				window.alert('Thanks for testing.');
+				dispatch(handleModal('THANKS'));
 				dispatch(authActions.signinSuccess());
 			})
 			.catch((err) => {
