@@ -2,10 +2,11 @@ const path = require('path');
 
 module.exports = {
 	stories: ['../src/components/**/*.story.jsx', '../src/containers/**/*.story.jsx'],
-	addons: ['@storybook/addon-postcss', '@storybook/addon-controls'],
+	addons: ['@storybook/addon-controls', '@storybook/addon-postcss'],
 	webpackFinal: async (config) => {
 		config.resolve.alias = {
 			'@styles': path.resolve(__dirname, '../src/styles'),
+			'@icons': path.resolve(__dirname, '../src/assets/icons'),
 			'@components': path.resolve(__dirname, '../src/components'),
 			'@containers': path.resolve(__dirname, '../src/containers'),
 		};

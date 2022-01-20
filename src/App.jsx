@@ -6,13 +6,17 @@ import './app.scss';
 
 // COMPONENTS
 import { Login } from '@pages';
+import { Modal } from '@components';
 
 const App = () => {
 	return (
-		<Routes>
-			<Route path="/" element={<Login src="/" />} />
-			<Route path="*" element={<Login src="/" />} />
-		</Routes>
+		<>
+			<Modal visible={true} title="Test" />
+			<Routes>
+				<Route path="/" element={<Login src="/" />} />
+				<Route path="*" element={<Login src="/" />} />
+			</Routes>
+		</>
 	);
 };
 
