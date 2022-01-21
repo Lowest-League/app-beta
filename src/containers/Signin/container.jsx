@@ -87,7 +87,7 @@ const Signin = () => {
 			</div>
 			<div className="Signin__helper">
 				<Typography id={`${containerId}-helper`} content="Wanna join us?" type="subtext" />
-				<a href="" target="_blank" rel="noopener noreferrer" className="Signin__link">
+				<a href="register" className="Signin__link">
 					<Typography id={`${containerId}-link`} content="Sign up" type="subtext" />
 				</a>
 			</div>

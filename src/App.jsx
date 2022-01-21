@@ -6,7 +6,7 @@ import './app.scss';
 
 // COMPONENTS
 import { Modals } from '@containers';
-import { Login } from '@pages';
+import { Login, Register } from '@pages';
 
 const App = () => {
 	return (
@@ -14,6 +14,8 @@ const App = () => {
 			<Modals />
 			<Routes>
 				<Route path="/" element={<Login src="/" />} />
+				<Route path="/register" element={<Register src="/register" />} />
+
 				<Route path="*" element={<Login src="/" />} />
 			</Routes>
 		</>
