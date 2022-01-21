@@ -9,7 +9,7 @@ import './style.scss';
 import { closeModal } from '@store/modules/modals/actions';
 
 // COMPONENTS
-import { Modal, Typography } from '@components';
+import { Modal, Typography, Button } from '@components';
 
 const Modals = () => {
 	const dispatch = useDispatch();
@@ -18,6 +18,11 @@ const Modals = () => {
 
 	function close() {
 		dispatch(closeModal());
+	}
+
+	function redirectAfterRegistration() {
+		dispatch(closeModal());
+		return (location.href = '/');
 	}
 
 	const element = {
@@ -38,6 +43,34 @@ const Modals = () => {
 							content="We are still under development but you are already registered."
 						/>
 					</>
+				}
+			/>
+		),
+		CONFIRM_REGISTRATION: (
+			<Modal
+				visible={active === ModalTypes.CONFIRM_REGISTRATION}
+				close={() => close()}
+				title="Your are in!"
+				content={
+					<>
+						<Typography
+							id="confirm-registration-modal-1"
+							content="Thank you for registration."
+							bold
+						/>
+						<Typography id="confirm-registration-modal-2" content="See you in few days." />
+					</>
+				}
+				footer={
+					<div className="ConfirmRegistration__footer">
+						<div className="ConfirmRegistration__button">
+							<Button
+								id="confirm-registration-modal"
+								onClick={() => redirectAfterRegistration()}
+								label="See ya."
+							/>
+						</div>
+					</div>
 				}
 			/>
 		),

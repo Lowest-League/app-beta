@@ -19,6 +19,25 @@ export const signinFailure = (message) => {
 	};
 };
 
+export const signup = () => {
+	return {
+		type: Types.SIGNUP,
+	};
+};
+
+export const signupSuccess = () => {
+	return {
+		type: Types.SIGNUP_SUCCESS,
+	};
+};
+
+export const signupFailure = (message) => {
+	return {
+		type: Types.SIGNUP_FAILURE,
+		payload: message,
+	};
+};
+
 export const handleError = (value) => {
 	return {
 		type: Types.HANDLE_ERROR,

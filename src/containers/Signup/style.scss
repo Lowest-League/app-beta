@@ -1,0 +1,35 @@
+$mobile-max-width: 280px;
+
+.Signup {
+	width: 100%;
+
+	&__header {
+		color: $color-dark;
+		margin-bottom: spacing('lg');
+	}
+
+	&__title {
+		h2 {
+			background: $color-gradient-primary;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__input {
+		margin-bottom: spacing('xl');
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: auto auto;
+		column-gap: spacing('lg');
+		padding-bottom: spacing('lg');
+
+		@media (max-width: $breakpoint-mobile) {
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto;
+			row-gap: spacing('lg');
+		}
+	}
+}

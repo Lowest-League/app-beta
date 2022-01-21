@@ -9,3 +9,12 @@ export const SIGNIN = (body = null) => {
 
 	return axios.post(options.url, options.body);
 };
+
+export const SIGNUP = (body = null) => {
+	const options = {
+		url: `${Routes.BASE_URL}/${Routes.SIGNUP}`,
+		body,
+	};
+
+	return axios.post(options.url, options.body);
+};

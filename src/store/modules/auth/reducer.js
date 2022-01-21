@@ -31,6 +31,28 @@ function reducer(state = INITIAL_STATE, action) {
 				message: action.payload,
 			};
 
+		case Types.SIGNUP:
+			return {
+				...state,
+				loading: true,
+				error: false,
+			};
+
+		case Types.SIGNUP_SUCCESS:
+			return {
+				...state,
+				loading: false,
+				error: false,
+			};
+
+		case Types.SIGNUP_FAILURE:
+			return {
+				...state,
+				loading: false,
+				error: true,
+				message: action.payload,
+			};
+
 		case Types.HANDLE_ERROR:
 			return {
 				...state,

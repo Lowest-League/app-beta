@@ -1,3 +1,12 @@
-.Modals {
-	color: 'red';
+.ConfirmRegistration {
+	&__footer {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 180px;
+	}
 }
