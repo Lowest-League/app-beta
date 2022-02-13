@@ -13,6 +13,7 @@
 		"stories": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook --port 9091",
 		"test:all": "jest --coverage --verbose=true --config ./jest.config.json",
 		"test:watch": "jest --watchAll --coverage --verbose=true --config ./jest.config.json",
+		"test:components": "jest --coverage --verbose=true ./src/components --config ./jest.config.json",
 		"lint": "prettier --write '**/*.js' '**/*.jsx' '**/*.test.js' '**/*.scss' '**/*.html'",
 		"build": "webpack --config webpack.config.js --mode production",
 		"start": "node server.js",
