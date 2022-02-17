@@ -3,7 +3,7 @@ import Routes from './routes';
 
 export const SIGNIN = (body = null) => {
 	const options = {
-		url: `${Routes.BASE_URL}/${Routes.SIGNIN}`,
+		url: `${Routes.TEST_URL}/${Routes.SIGNIN}`,
 		body,
 	};
 
@@ -12,7 +12,7 @@ export const SIGNIN = (body = null) => {
 
 export const SIGNUP = (body = null) => {
 	const options = {
-		url: `${Routes.BASE_URL}/${Routes.SIGNUP}`,
+		url: `${Routes.TEST_URL}/${Routes.SIGNUP}`,
 		body,
 	};
 
