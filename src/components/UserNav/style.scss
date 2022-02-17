@@ -1,0 +1,39 @@
+$photo-size: 40px;
+
+.UserNav {
+	width: fit-content;
+	padding: spacing('md') spacing('lg');
+	display: flex;
+	align-items: center;
+	background-color: $color-grey-4;
+	border-radius: 50px;
+
+	&__photo {
+		width: $photo-size;
+		height: $photo-size;
+		padding: spacing('xs');
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: $color-gradient-primary;
+	}
+
+	&__img {
+		width: $photo-size;
+		height: $photo-size;
+		background-color: $color-light;
+		border-radius: 50%;
+	}
+
+	&__info {
+		margin-right: spacing('md');
+		color: $color-blue-dark;
+	}
+
+	&__logout {
+		cursor: pointer;
+		color: $color-dark;
+		text-align: right;
+	}
+}
