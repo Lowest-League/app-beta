@@ -8,7 +8,7 @@ export const signinRequest = (body) => {
 		SIGNIN(body)
 			.then((res) => {
 				const response = res.data;
-				window.localStorage.setItem('lowestLeagueToken', response.data);
+				window.sessionStorage.setItem('lowestLeagueToken', response.data);
 				dispatch(handleModal('THANKS'));
 				dispatch(authActions.signinSuccess());
 			})
