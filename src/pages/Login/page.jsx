@@ -10,10 +10,10 @@ import { Signin } from '@containers';
 import { GithubLogo } from '@icons';
 
 const Login = (props) => {
-	const { src } = props;
+	const { logged } = props;
 	const iconSizes = '24px';
 
-	return (
+	const page = (
 		<section className="Login">
 			<div className="Login__top" />
 			<div className="Login__form">
@@ -31,6 +31,8 @@ const Login = (props) => {
 			</a>
 		</section>
 	);
+
+	return logged ? null : page;
 };
 
 Login.prototypes = {

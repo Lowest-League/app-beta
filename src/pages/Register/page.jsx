@@ -10,10 +10,10 @@ import { Signup } from '@containers';
 import { GithubLogo } from '@icons';
 
 const Register = (props) => {
-	const { src, cancel } = props;
+	const { logged, cancel } = props;
 	const iconSizes = '24px';
 
-	return (
+	const page = (
 		<section className="Register">
 			<div className="Register__top" />
 			<div className="Register__form">
@@ -31,6 +31,8 @@ const Register = (props) => {
 			</a>
 		</section>
 	);
+
+	return logged ? null : page;
 };
 
 Register.prototypes = {
