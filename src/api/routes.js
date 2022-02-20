@@ -3,6 +3,7 @@ const Routes = {
 	TEST_URL: 'http://localhost:3001/api',
 	SIGNIN: 'auth/signin',
 	SIGNUP: 'auth/signup',
+	GET_USER: 'auth/load',
 };
 
 export default Routes;

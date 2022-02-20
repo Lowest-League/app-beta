@@ -18,3 +18,17 @@ export const SIGNUP = (body = null) => {
 
 	return axios.post(options.url, options.body);
 };
+
+export const LOAD_USER = () => {
+	const token = window.sessionStorage.getItem('lowestLeagueToken');
+
+	const options = {
+		url: `${Routes.TEST_URL}/${Routes.GET_USER}`,
+	};
+
+	const headers = {
+		authorization: `Bearer ${token}`,
+	};
+
+	return axios.get(options.url, { headers });
+};
