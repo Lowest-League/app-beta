@@ -38,6 +38,31 @@ export const signupFailure = (message) => {
 	};
 };
 
+export const loadUser = () => {
+	return {
+		type: Types.LOAD_USER,
+	};
+};
+
+export const loadUserSuccess = (data) => {
+	return {
+		type: Types.LOAD_USER_SUCCESS,
+		payload: data,
+	};
+};
+
+export const loadUserFailure = () => {
+	return {
+		type: Types.LOAD_USER_FAILURE,
+	};
+};
+
+export const signoff = () => {
+	return {
+		type: Types.SIGNOFF,
+	};
+};
+
 export const handleError = (value) => {
 	return {
 		type: Types.HANDLE_ERROR,

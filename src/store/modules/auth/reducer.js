@@ -3,7 +3,8 @@ import * as Types from './types';
 const INITIAL_STATE = {
 	loading: false,
 	error: false,
-	token: '',
+	user: null,
+	token: null,
 	message: '',
 };
 
@@ -51,6 +52,36 @@ function reducer(state = INITIAL_STATE, action) {
 				loading: false,
 				error: true,
 				message: action.payload,
+			};
+
+		case Types.LOAD_USER:
+			return {
+				...state,
+				loading: true,
+				error: false,
+			};
+
+		case Types.LOAD_USER_SUCCESS:
+			return {
+				...state,
+				user: action.payload,
+				token: window.sessionStorage.getItem('lowestLeagueToken'),
+				loading: false,
+				error: false,
+			};
+
+		case Types.LOAD_USER_FAILURE:
+			return {
+				...state,
+				loading: false,
+				error: true,
+			};
+
+		case Types.SIGNOFF:
+			return {
+				...state,
+				user: null,
+				token: null,
 			};
 
 		case Types.HANDLE_ERROR:
