@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // STYLE
@@ -11,6 +12,7 @@ import { GithubLogo } from '@icons';
 
 const Login = (props) => {
 	const { logged } = props;
+	const navigate = useNavigate();
 	const iconSizes = '24px';
 
 	const page = (
@@ -32,11 +34,15 @@ const Login = (props) => {
 		</section>
 	);
 
+	useEffect(() => {
+		if (logged) navigate('home');
+	}, [logged]);
+
 	return logged ? null : page;
 };
 
 Login.prototypes = {
-	src: PropTypes.string,
+	logged: PropTypes.bool,
 };
 
 export default Login;

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, Routes, Route } from 'react-router-dom';
+import { useNavigate, Routes, Route, Outlet } from 'react-router-dom';
 import { loadRequest } from '@store/modules/auth/requests';
 
 // STYLE
@@ -8,13 +8,14 @@ import './app.scss';
 
 // COMPONENTS
 import { Modals, Topbar } from '@containers';
-import { Login, Register } from '@pages';
+import { Login, Register, Home } from '@pages';
 
 const App = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const token = window.sessionStorage.getItem('lowestLeagueToken');
 	const authStore = useSelector((store) => store.auth);
+	const sessionToken = window.sessionStorage.getItem('lowestLeagueToken');
+	const token = authStore.token;
 	const logged = authStore.user;
 
 	// redirect methods
@@ -22,27 +23,35 @@ const App = () => {
 		navigate('/');
 	}
 
-	useEffect(() => {
-		if (token) dispatch(loadRequest());
-	}, []);
-
-	return (
+	const layout = (
 		<>
 			<Modals />
 			{logged && <Topbar />}
-			<Routes>
-				<Route path="/" element={<Login logged={logged} />} />
-				<Route
-					path="/register"
-					element={<Register logged={logged} cancel={() => redirectToLogin()} />}
-				/>
-				<Route path="/home" element={<h1>Home</h1>} />
-				<Route path="/match" element={<h1>Match</h1>} />
-
-				<Route path="*" element={<Login src="/" />} />
-			</Routes>
+			<Outlet />
 		</>
 	);
+
+	const render = () => (
+		<Routes>
+			<Route path="/" element={layout}>
+				<Route index element={<Login logged={logged} />} />
+				<Route
+					path="register"
+					element={<Register logged={logged} cancel={() => redirectToLogin()} />}
+				/>
+				<Route path="home" element={<Home logged={logged} />} />
+				<Route path="match" element={<h1>Match</h1>} />
+			</Route>
+
+			<Route path="*" element={<Login logged={logged} />} />
+		</Routes>
+	);
+
+	useEffect(() => {
+		if (sessionToken && !logged) dispatch(loadRequest());
+	}, [token]);
+
+	return render();
 };
 
 export default App;

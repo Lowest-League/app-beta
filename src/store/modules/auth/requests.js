@@ -9,7 +9,7 @@ export const signinRequest = (body) => {
 			.then((res) => {
 				const response = res.data;
 				window.sessionStorage.setItem('lowestLeagueToken', response.data);
-				dispatch(authActions.signinSuccess());
+				dispatch(authActions.signinSuccess(response.data));
 			})
 			.catch((err) => {
 				const data = err.response.data;

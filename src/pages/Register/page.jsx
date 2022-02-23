@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // STYLE
@@ -11,6 +12,7 @@ import { GithubLogo } from '@icons';
 
 const Register = (props) => {
 	const { logged, cancel } = props;
+	const navigate = useNavigate();
 	const iconSizes = '24px';
 
 	const page = (
@@ -32,11 +34,16 @@ const Register = (props) => {
 		</section>
 	);
 
+	useEffect(() => {
+		if (logged) navigate('home');
+	}, [logged]);
+
 	return logged ? null : page;
 };
 
 Register.prototypes = {
-	src: PropTypes.string,
+	logged: PropTypes.bool,
+	cancel: PropTypes.func,
 };
 
 export default Register;

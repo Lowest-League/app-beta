@@ -20,6 +20,7 @@ function reducer(state = INITIAL_STATE, action) {
 		case Types.SIGNIN_SUCCESS:
 			return {
 				...state,
+				token: action.payload,
 				loading: false,
 				error: false,
 			};

@@ -6,9 +6,10 @@ export const signin = () => {
 	};
 };
 
-export const signinSuccess = () => {
+export const signinSuccess = (token) => {
 	return {
 		type: Types.SIGNIN_SUCCESS,
+		payload: token,
 	};
 };
 
@@ -25,9 +26,10 @@ export const signup = () => {
 	};
 };
 
-export const signupSuccess = () => {
+export const signupSuccess = (token) => {
 	return {
 		type: Types.SIGNUP_SUCCESS,
+		payload: token,
 	};
 };
 
