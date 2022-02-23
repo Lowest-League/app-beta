@@ -1,6 +1,8 @@
 import axios from 'axios';
 import Routes from './routes';
 
+// console.log - replace TEST_URL by the orrect url
+
 export const SIGNIN = (body = null) => {
 	const options = {
 		url: `${Routes.TEST_URL}/${Routes.SIGNIN}`,
@@ -24,6 +26,19 @@ export const LOAD_USER = () => {
 
 	const options = {
 		url: `${Routes.TEST_URL}/${Routes.GET_USER}`,
+	};
+
+	const headers = {
+		authorization: `Bearer ${token}`,
+	};
+
+	return axios.get(options.url, { headers });
+};
+
+export const LOAD_LEAGUES = () => {
+	const token = window.sessionStorage.getItem('lowestLeagueToken');
+	const options = {
+		url: `${Routes.TEST_URL}/${Routes.GET_LEAGUES}`,
 	};
 
 	const headers = {

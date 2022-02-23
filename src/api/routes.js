@@ -4,6 +4,7 @@ const Routes = {
 	SIGNIN: 'auth/signin',
 	SIGNUP: 'auth/signup',
 	GET_USER: 'auth/load',
+	GET_LEAGUES: 'user/leagues',
 };
 
 export default Routes;
