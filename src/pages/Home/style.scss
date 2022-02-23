@@ -1,0 +1,22 @@
+.Home {
+	width: 100%;
+	height: 100vh;
+	margin-top: $page-margin-top;
+	display: grid;
+	grid-template-columns: ($breakpoint-mobile - 200) auto;
+
+	@media (max-width: $breakpoint-mobile) {
+		grid-template-columns: 100%;
+	}
+
+	&__leagues {
+		width: 100%;
+		padding: 0;
+		padding: 0 $horizontal-padding;
+		list-style: none;
+	}
+
+	&__league {
+		width: 100%;
+	}
+}

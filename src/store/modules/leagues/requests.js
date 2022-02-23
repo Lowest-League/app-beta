@@ -8,7 +8,6 @@ export const getLeaguesRequest = () => {
 			.then((res) => {
 				const response = res.data;
 				dispatch(leaguesActions.loadLeaguesSuccess(response.data));
-				console.log(response.data);
 			})
 			.catch(() => {
 				dispatch(leaguesActions.loadLeaguesFailure());

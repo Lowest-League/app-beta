@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Routes, Route, Outlet } from 'react-router-dom';
 import { loadRequest } from '@store/modules/auth/requests';

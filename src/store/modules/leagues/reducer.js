@@ -18,7 +18,7 @@ function reducer(state = INITIAL_STATE, action) {
 		case Types.LOAD_LEAGUES_SUCCESS:
 			return {
 				...state,
-				token: action.payload,
+				leagues: action.payload,
 				loading: false,
 				error: false,
 			};
@@ -28,7 +28,6 @@ function reducer(state = INITIAL_STATE, action) {
 				...state,
 				loading: false,
 				error: true,
-				leagues: action.payload,
 			};
 
 		default:
