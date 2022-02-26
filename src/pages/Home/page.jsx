@@ -14,8 +14,8 @@ const Home = (props) => {
 	const { logged } = props;
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const leaguesStore = useSelector((store) => store.leagues);
-	const leagues = leaguesStore.leagues;
+	const authStore = useSelector((store) => store.auth);
+	const user = authStore.user;
 
 	useEffect(() => {
 		if (!logged) navigate('/');
@@ -24,22 +24,9 @@ const Home = (props) => {
 
 	return (
 		<div className="Home">
-			<ul className="Home__leagues">
-				{leagues && leagues.length ? (
-					leagues.map((league) => (
-						<li className="Home__league" key={league.id}>
-							<CardLeague
-								id={league.id}
-								name={league.name}
-								players={league.players}
-								onClick={() => console.log('League: ', league.id)}
-							/>
-						</li>
-					))
-				) : (
-					<Typography id="home-noLeague" content="No league found" italic />
-				)}
-			</ul>
+			<div className="Home__content">
+				<Typography id="home-title" content={`Welcome, ${user?.username}.`} type="title" />
+			</div>
 		</div>
 	);
 };

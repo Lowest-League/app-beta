@@ -9,14 +9,12 @@
 		grid-template-columns: 100%;
 	}
 
-	&__leagues {
-		width: 100%;
-		padding: 0;
-		padding: 0 $horizontal-padding;
-		list-style: none;
-	}
+	&__content {
+		position: fixed;
+		padding: $horizontal-padding;
 
-	&__league {
-		width: 100%;
+		@media (max-width: $breakpoint-mobile) {
+			width: 200px;
+		}
 	}
 }

@@ -46,10 +46,10 @@ export const loadUser = () => {
 	};
 };
 
-export const loadUserSuccess = (data) => {
+export const loadUserSuccess = (user) => {
 	return {
 		type: Types.LOAD_USER_SUCCESS,
-		payload: data,
+		payload: user,
 	};
 };
 
