@@ -5,7 +5,7 @@ import Routes from './routes';
 
 export const SIGNIN = (body = null) => {
 	const options = {
-		url: `${Routes.TEST_URL}/${Routes.SIGNIN}`,
+		url: `${Routes.BASE_URL}/${Routes.SIGNIN}`,
 		body,
 	};
 
@@ -14,7 +14,7 @@ export const SIGNIN = (body = null) => {
 
 export const SIGNUP = (body = null) => {
 	const options = {
-		url: `${Routes.TEST_URL}/${Routes.SIGNUP}`,
+		url: `${Routes.BASE_URL}/${Routes.SIGNUP}`,
 		body,
 	};
 
@@ -25,7 +25,7 @@ export const LOAD_USER = () => {
 	const token = window.sessionStorage.getItem('lowestLeagueToken');
 
 	const options = {
-		url: `${Routes.TEST_URL}/${Routes.GET_USER}`,
+		url: `${Routes.BASE_URL}/${Routes.GET_USER}`,
 	};
 
 	const headers = {
@@ -38,7 +38,7 @@ export const LOAD_USER = () => {
 export const LOAD_LEAGUES = () => {
 	const token = window.sessionStorage.getItem('lowestLeagueToken');
 	const options = {
-		url: `${Routes.TEST_URL}/${Routes.GET_LEAGUES}`,
+		url: `${Routes.BASE_URL}/${Routes.GET_LEAGUES}`,
 	};
 
 	const headers = {
