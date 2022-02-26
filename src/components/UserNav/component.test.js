@@ -9,7 +9,7 @@ const componentId = 'usernav';
 const user = {
 	id: '007',
 	username: 'Jest',
-	leagues: []
+	leagues: [],
 };
 const click = jest.fn();
 const defaultProps = (props = {}) => {
