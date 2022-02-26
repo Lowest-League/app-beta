@@ -9,7 +9,8 @@ import './style.scss';
 import { Typography } from '@components';
 
 const UserNav = (props) => {
-	const { username, logout } = props;
+	const { user, logout } = props;
+	const { username } = user;
 
 	const componentId = 'usernav';
 
@@ -22,14 +23,20 @@ const UserNav = (props) => {
 				</div>
 			</div>
 			<div className="UserNav__photo" data-testid={`${componentId}-photo`}>
-				<div className="UserNav__img" />
+				<div className="UserNav__img">
+					<Typography id={`${componentId}-user-initials`} content={username.slice(0,2)} type="subtitle" />
+				</div>
 			</div>
 		</div>
 	);
 };
 
 UserNav.prototypes = {
-	username: PropTypes.string,
+	username: PropTypes.shape({
+		id: PropTypes.string,
+		username: PropTypes.string,
+		leagues: PropTypes.arrayOf(PropTypes.string)
+	}),
 	logout: PropTypes.func,
 };
 

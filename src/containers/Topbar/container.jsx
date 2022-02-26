@@ -14,11 +14,12 @@ const Topbar = () => {
 	const dispatch = useDispatch();
 	const authStore = useSelector((store) => store.auth);
 	const user = authStore.user;
-	const { username } = user;
 
 	const container = (
 		<div className="Topbar">
-			<UserNav username={username} logout={() => logout(dispatch)} />
+			<div className="Topbar__content">
+				<UserNav user={user} logout={() => logout(dispatch)} />
+			</div>
 		</div>
 	);
 

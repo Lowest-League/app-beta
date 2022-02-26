@@ -6,10 +6,15 @@ import '@testing-library/jest-dom';
 import UserNav from './component';
 
 const componentId = 'usernav';
+const user = {
+	id: '007',
+	username: 'Jest',
+	leagues: []
+};
 const click = jest.fn();
 const defaultProps = (props = {}) => {
 	return {
-		username: 'Jest',
+		user,
 		...props,
 	};
 };
@@ -25,7 +30,7 @@ describe('UserNav', () => {
 		expect(getByTestId(`typography-${componentId}-username`).textContent).toBe('Jest');
 		expect(getByTestId(`${componentId}-logout`)).toBeTruthy();
 		expect(getByTestId(`typography-${componentId}-logout-label`).textContent).toBe('Logout');
-		expect(getByTestId(`${componentId}-photo`)).toBeTruthy();
+		expect(getByTestId(`typography-${componentId}-user-initials`).textContent).toBe('Je');
 	});
 
 	it('should logout', () => {

@@ -5,4 +5,8 @@
 	left: 0;
 	display: flex;
 	justify-content: flex-end;
+
+	&__content {
+		padding: spacing("md");
+	}
 }
