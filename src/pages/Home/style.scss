@@ -1,0 +1,20 @@
+.Home {
+	width: 100%;
+	height: 100vh;
+	margin-top: $page-margin-top;
+	display: grid;
+	grid-template-columns: ($breakpoint-mobile - 200) auto;
+
+	@media (max-width: $breakpoint-mobile) {
+		grid-template-columns: 100%;
+	}
+
+	&__content {
+		position: fixed;
+		padding: $horizontal-padding;
+
+		@media (max-width: $breakpoint-mobile) {
+			width: 200px;
+		}
+	}
+}

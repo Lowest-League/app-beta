@@ -1,1 +1,1 @@
-export { translations } from './translations';
+export { default as logout } from './logout';

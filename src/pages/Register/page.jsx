@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // STYLE
@@ -10,10 +11,11 @@ import { Signup } from '@containers';
 import { GithubLogo } from '@icons';
 
 const Register = (props) => {
-	const { src, cancel } = props;
+	const { logged, cancel } = props;
+	const navigate = useNavigate();
 	const iconSizes = '24px';
 
-	return (
+	const page = (
 		<section className="Register">
 			<div className="Register__top" />
 			<div className="Register__form">
@@ -31,10 +33,17 @@ const Register = (props) => {
 			</a>
 		</section>
 	);
+
+	useEffect(() => {
+		if (logged) navigate('home');
+	}, [logged]);
+
+	return logged ? null : page;
 };
 
 Register.prototypes = {
-	src: PropTypes.string,
+	logged: PropTypes.bool,
+	cancel: PropTypes.func,
 };
 
 export default Register;

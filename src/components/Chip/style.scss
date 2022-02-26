@@ -1,0 +1,27 @@
+.Chip {
+	padding: spacing('xs');
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: content-box;
+	background: $color-blue-dark;
+	border-radius: 20px;
+	color: $color-blue-dark;
+
+	&--active {
+		background: $color-gradient-primary;
+	}
+
+	&__content {
+		width: 100%;
+		background: $color-light;
+		padding: spacing('xs') 0;
+		text-align: center;
+		border-radius: 20px;
+
+		&--active {
+			background: $color-gradient-primary;
+			color: $color-light;
+		}
+	}
+}
