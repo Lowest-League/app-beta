@@ -16,7 +16,7 @@ const League = (props) => {
 			<div className="League__content">
 				<div className="League__left">
 					<div className="League__name">
-						<Typography id={`${id}-name`} content={name} size="lg" />
+						<Typography id={`${id}-name`} content={name} />
 					</div>
 					<Typography id={`${id}-id`} content={`ID: ${id}`} size="sm" />
 				</div>

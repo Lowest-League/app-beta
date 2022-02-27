@@ -27,6 +27,7 @@ const Card = (props) => {
 Card.prototypes = {
 	id: PropTypes.string.isRequired,
 	type: PropTypes.oneOf(['league', 'match']),
+	data: PropTypes.object,
 };
 
 export default Card;
