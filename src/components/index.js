@@ -5,3 +5,4 @@ export { default as Loader } from './Loader/component';
 export { default as Modal } from './Modal/component';
 export { default as UserNav } from './UserNav/component';
 export { default as Card } from './Card/component';
+export { default as Wrapper } from './Wrapper/component';

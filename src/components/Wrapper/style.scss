@@ -1,0 +1,36 @@
+.Wrapper {
+	width: 100%;
+	background: $color-grey-3;
+	border-radius: $border-radius;
+
+	::-webkit-scrollbar {
+		width: 4px;
+		border-radius: $border-radius;
+	}
+
+	::-webkit-scrollbar-track {
+		background: $color-grey-4;
+		border-radius: $border-radius;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: $color-blue-dark;
+		border-radius: $border-radius;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: $color-blue-dark;
+	}
+
+	&__wrapper {
+		padding: spacing('lg');
+	}
+
+	&__title {
+		margin-bottom: spacing('md');
+	}
+
+	&__content {
+		overflow-y: auto;
+	}
+}
