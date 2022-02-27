@@ -94,7 +94,7 @@ const Signup = (props) => {
 	const form = (
 		<div className="Signup">
 			<div className="Signup__header">
-				<Typography id={`${containerId}-header`} content="Register your account." type="subtitle" />
+				<Typography id={`${containerId}-header`} content="Register your account." size="lg" />
 			</div>
 			<form className="Signup__form" onSubmit={register} id="login-form">
 				<div className="Signup__input">

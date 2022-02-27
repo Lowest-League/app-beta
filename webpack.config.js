@@ -51,8 +51,6 @@ module.exports = (env) => {
 				},
 			],
 		},
-		plugins: [
-			new Dotenv({ path: `./env/.env${env.MODE ? `.${env.MODE}` : ''}` })
-		]
+		plugins: [new Dotenv({ path: `./env/.env${env.MODE ? `.${env.MODE}` : ''}` })],
 	};
 };

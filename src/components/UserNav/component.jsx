@@ -19,7 +19,7 @@ const UserNav = (props) => {
 			<div className="UserNav__info">
 				<Typography id={`${componentId}-username`} content={username} />
 				<div className="UserNav__logout" onClick={logout} data-testid={`${componentId}-logout`}>
-					<Typography id={`${componentId}-logout-label`} content="Logout" type="subtext" italic />
+					<Typography id={`${componentId}-logout-label`} content="Logout" size="sm" italic />
 				</div>
 			</div>
 			<div className="UserNav__photo" data-testid={`${componentId}-photo`}>
@@ -27,7 +27,7 @@ const UserNav = (props) => {
 					<Typography
 						id={`${componentId}-user-initials`}
 						content={username.slice(0, 2)}
-						type="subtitle"
+						size="lg"
 					/>
 				</div>
 			</div>

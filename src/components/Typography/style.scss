@@ -15,18 +15,18 @@
 		font-style: italic;
 	}
 
-	&__title {
-		@include fontTitle('md');
-		@extend .default;
-	}
-
-	&__subtitle {
-		@include fontTitle('sm');
-		@extend .default;
-	}
-
-	&__subtext {
+	&--sm {
 		@include fontText('sm');
+		@extend .default;
+	}
+
+	&--lg {
+		@include fontText('lg');
+		@extend .default;
+	}
+
+	&--xl {
+		@include fontText('xl');
 		@extend .default;
 	}
 }

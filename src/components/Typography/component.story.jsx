@@ -7,8 +7,8 @@ export default {
 	argTypes: {
 		id: { control: 'text' },
 		content: { control: 'text' },
-		type: {
-			options: ['title', 'subtitle', 'text', 'subtext'],
+		size: {
+			options: ['sm', 'default', 'lg', 'xl'],
 			control: { type: 'select' },
 		},
 		bold: { control: 'boolean' },
@@ -22,6 +22,7 @@ export const Default = Template.bind({});
 Default.args = {
 	id: 'storybook',
 	content: 'Typography',
+	size: 'default',
 	bold: false,
 	italic: false,
 };

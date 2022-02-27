@@ -24,10 +24,10 @@ const CardLeague = (props) => {
 					<Typography
 						id={`${componentId}-players`}
 						content={players ? String(players) : '0'}
-						type="subtitle"
+						size="lg"
 					/>
 					<span className="CardLeague__players">
-						<Typography id={`${componentId}-players-label`} content="players" type="subtext" />
+						<Typography id={`${componentId}-players-label`} content="players" size="sm" />
 					</span>
 				</div>
 			</div>
