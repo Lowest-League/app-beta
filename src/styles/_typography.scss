@@ -12,7 +12,11 @@ $font-family: 'Nunito', sans-serif;
 	}
 
 	@if $size == 'lg' {
-		font-size: 20px;
+		font-size: 24px;
+	}
+
+	@if $size == 'xl' {
+		font-size: 48px;
 	}
 }
 

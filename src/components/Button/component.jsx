@@ -15,7 +15,7 @@ const Button = (props) => {
 
 	const renderHelper = () => {
 		return helper ? (
-			<Typography id={`${componentId}-helper`} content={helper} type="subtext" italic />
+			<Typography id={`${componentId}-helper`} content={helper} size="sm" italic />
 		) : null;
 	};
 

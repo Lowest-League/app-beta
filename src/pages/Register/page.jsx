@@ -29,7 +29,7 @@ const Register = (props) => {
 				className="Register__github"
 			>
 				<GithubLogo width={iconSizes} height={iconSizes} />
-				<Typography id="login" content="Follow us at GitHub" type="subtext" />
+				<Typography id="login" content="Follow us at GitHub" size="sm" />
 			</a>
 		</section>
 	);

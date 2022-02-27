@@ -58,9 +58,9 @@ const Signin = () => {
 	const form = (
 		<div className="Signin">
 			<div className="Signin__header">
-				<Typography id={`${containerId}-header`} content="Login into the" type="subtitle" />
+				<Typography id={`${containerId}-header`} content="Login into the" size="lg" />
 				<div className="Signin__title">
-					<Typography id={`${containerId}-title`} content="Lowest League" type="subtitle" bold />
+					<Typography id={`${containerId}-title`} content="Lowest League" size="lg" bold />
 				</div>
 			</div>
 			<form className="Signin__form" onSubmit={login} id="login-form">
@@ -86,9 +86,9 @@ const Signin = () => {
 				<Button id={containerId} submit="login-form" label="Enter" />
 			</div>
 			<div className="Signin__helper">
-				<Typography id={`${containerId}-helper`} content="Wanna join us?" type="subtext" />
+				<Typography id={`${containerId}-helper`} content="Wanna join us?" size="sm" />
 				<a href="register" className="Signin__link">
-					<Typography id={`${containerId}-link`} content="Sign up" type="subtext" />
+					<Typography id={`${containerId}-link`} content="Sign up" size="sm" />
 				</a>
 			</div>
 		</div>

@@ -23,7 +23,7 @@ const InputText = (props) => {
 					data-testid={`${componentId}-label`}
 					htmlFor={`${componentId}-field`}
 				>
-					<Typography id={`${componentId}-label`} type="subtext" content={label} />
+					<Typography id={`${componentId}-label`} size="sm" content={label} />
 				</label>
 			)}
 			<input
@@ -46,7 +46,7 @@ const InputText = (props) => {
 					})}
 					data-testid={`${componentId}-helper`}
 				>
-					<Typography id={componentId} content={helper} italic type="subtext" />
+					<Typography id={componentId} content={helper} italic size="sm" />
 				</span>
 			)}
 			{error.value && error.message && (
@@ -56,7 +56,7 @@ const InputText = (props) => {
 					})}
 					data-testid={`${componentId}-helper`}
 				>
-					<Typography id={componentId} content={error.message} italic type="subtext" />
+					<Typography id={componentId} content={error.message} italic size="sm" />
 				</span>
 			)}
 		</div>

@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 import Typography from './component';
 
 let component;
-const types = ['title', 'subtitle', 'subtext'];
+const sizes = ['sm', 'lg', 'xl'];
 
 describe('Typography', () => {
 	beforeEach(() => (component = (props) => <Typography {...props} />));
@@ -26,80 +26,80 @@ describe('Typography', () => {
 		expect(container.querySelector('p')).toBeTruthy();
 	});
 
-	it('should render a title', () => {
+	it('should render sm', () => {
 		const props = {
 			id: 'jest',
-			content: 'Typography title',
-			type: 'title',
+			content: 'Typography sm',
+			size: 'sm',
 		};
 
 		const componentId = `typography-${props.id}`;
 
-		const { getByTestId, container } = render(component(props));
+		const { getByTestId } = render(component(props));
 
 		expect(getByTestId(componentId)).toBeTruthy();
+		expect(getByTestId(componentId).classList).toContain('Typography--sm');
 		expect(getByTestId(componentId).textContent).toBe(props.content);
-		expect(container.querySelector('h1')).toBeTruthy();
 	});
 
-	it('should render a subtitle', () => {
+	it('should render lg', () => {
 		const props = {
 			id: 'jest',
-			content: 'Typography subtitle',
-			type: 'subtitle',
+			content: 'Typography lg',
+			size: 'lg',
 		};
 
 		const componentId = `typography-${props.id}`;
 
-		const { getByTestId, container } = render(component(props));
+		const { getByTestId } = render(component(props));
 
 		expect(getByTestId(componentId)).toBeTruthy();
+		expect(getByTestId(componentId).classList).toContain('Typography--lg');
 		expect(getByTestId(componentId).textContent).toBe(props.content);
-		expect(container.querySelector('h2')).toBeTruthy();
 	});
 
-	it('should render a subtext', () => {
+	it('should render xl', () => {
 		const props = {
 			id: 'jest',
-			content: 'Typography helper',
-			type: 'subtext',
+			content: 'Typography xl',
+			size: 'xl',
 		};
 
 		const componentId = `typography-${props.id}`;
 
-		const { getByTestId, container } = render(component(props));
+		const { getByTestId } = render(component(props));
 
 		expect(getByTestId(componentId)).toBeTruthy();
+		expect(getByTestId(componentId).classList).toContain('Typography--xl');
 		expect(getByTestId(componentId).textContent).toBe(props.content);
-		expect(container.querySelector('p')).toBeTruthy();
 	});
 
-	it.each(types)('should apply bold styling', (type) => {
+	it.each(sizes)('should apply bold styling', (size) => {
 		const props = {
 			id: 'jest',
 			content: 'Typography bold',
 			bold: true,
-			type,
+			size,
 		};
 
 		const componentId = `typography-${props.id}`;
-		const className = `Typography${type.length ? '__' : ''}${type} Typography--bold`;
+		const className = `Typography Typography--bold Typography${size.length ? '--' : ''}${size}`;
 
 		const { getByTestId } = render(component(props));
 
 		expect(getByTestId(componentId).className).toBe(className);
 	});
 
-	it.each(types)('should apply italic styling', (type) => {
+	it.each(sizes)('should apply italic styling', (size) => {
 		const props = {
 			id: 'jest',
 			content: 'Typography italic',
 			italic: true,
-			type,
+			size,
 		};
 
 		const componentId = `typography-${props.id}`;
-		const className = `Typography${type.length ? '__' : ''}${type} Typography--italic`;
+		const className = `Typography Typography--italic Typography${size.length ? '--' : ''}${size}`;
 
 		const { getByTestId } = render(component(props));
 

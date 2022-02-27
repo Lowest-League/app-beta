@@ -1,6 +1,5 @@
 const Routes = {
-	BASE_URL: 'https://lowest-league-api.herokuapp.com/api',
-	// BASE_URL: 'http://localhost:3001/api',
+	BASE_URL: process.env.BASE_URL,
 	SIGNIN: 'auth/signin',
 	SIGNUP: 'auth/signup',
 	GET_USER: 'auth/load',

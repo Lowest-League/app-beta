@@ -25,7 +25,7 @@ const Chip = (props) => {
 				className={classnames('Chip__content', { 'Chip__content--active': active })}
 				data-testid={`${componentId}-content`}
 			>
-				<Typography id={componentId} content={label} type={small ? 'subtext' : 'text'} />
+				<Typography id={componentId} content={label} size={small ? 'sm' : 'default'} />
 			</div>
 		</div>
 	);

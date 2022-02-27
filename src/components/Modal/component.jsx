@@ -20,7 +20,7 @@ const Modal = (props) => {
 			<div className="Modal__box">
 				<div className="Modal__top">
 					<div className="Modal__title">
-						<Typography id={componentId} content={title} bold type="subtitle" />
+						<Typography id={componentId} content={title} bold size="lg" />
 					</div>
 					<span onClick={close}>
 						<CloseIcon className="Modal__close" width={sizes} height={sizes} />

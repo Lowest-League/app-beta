@@ -25,7 +25,7 @@ const Home = (props) => {
 	return (
 		<div className="Home">
 			<div className="Home__content">
-				<Typography id="home-title" content={`Welcome, ${user?.username}.`} type="title" />
+				<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="xl" />
 			</div>
 		</div>
 	);
