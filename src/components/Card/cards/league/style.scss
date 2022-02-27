@@ -1,0 +1,48 @@
+.League {
+	width: 400px;
+	background: $color-gradient-primary;
+	padding: spacing('xs');
+	border-radius: $border-radius;
+	cursor: pointer;
+
+	&:hover {
+		background: $color-gradient-primary-invert;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: $color-light;
+		padding: spacing('md');
+		border-radius: $border-radius;
+
+		&:hover {
+			background: $color-grey-4;
+		}
+	}
+
+	&__left {
+		display: grid;
+		grid-template-rows: auto auto;
+	}
+
+	&__name {
+		margin-bottom: spacing('lg');
+
+		p {
+			background: $color-gradient-primary;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__right {
+		padding: spacing('md');
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $color-grey-3;
+		border-radius: $border-radius;
+	}
+}
