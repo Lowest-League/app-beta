@@ -8,7 +8,7 @@ import { getLeaguesRequest } from '@store/modules/leagues/requests';
 import './style.scss';
 
 // COMPONENTS
-import { CardLeague, Typography } from '@components';
+import { Typography, Wrapper, Loader, Card } from '@components';
 
 const Home = (props) => {
 	const { logged } = props;
@@ -16,6 +16,10 @@ const Home = (props) => {
 	const navigate = useNavigate();
 	const authStore = useSelector((store) => store.auth);
 	const user = authStore.user;
+	const leaguesStore = useSelector((store) => store.leagues);
+	const leagues = leaguesStore.leagues;
+
+	const loader = <Loader />;
 
 	useEffect(() => {
 		if (!logged) navigate('/');
@@ -25,7 +29,23 @@ const Home = (props) => {
 	return (
 		<div className="Home">
 			<div className="Home__content">
-				<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="xl" />
+				<div className="Home__header">
+					<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="xl" />
+				</div>
+				<Wrapper
+					id="home-leagues"
+					title="Leagues"
+					height={320}
+					content={
+						leagues
+							? leagues.map((league) => (
+									<span key={league.id}>
+										<Card id={league.id} type="league" data={league} />
+									</span>
+							  ))
+							: loader
+					}
+				/>
 			</div>
 		</div>
 	);

@@ -4,7 +4,7 @@ $font-family: 'Nunito', sans-serif;
 	font-family: $font-family;
 
 	@if $size == 'sm' {
-		font-size: 12px;
+		font-size: 10px;
 	}
 
 	@if $size == 'md' {
