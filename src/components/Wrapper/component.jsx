@@ -8,7 +8,7 @@ import './style.scss';
 import { Typography } from '@components';
 
 const Wrapper = (props) => {
-	const { id, title, content, height } = props;
+	const { id, title, header, content, height } = props;
 
 	const componentId = `wrapper-${id}`;
 
@@ -17,6 +17,7 @@ const Wrapper = (props) => {
 			<div className="Wrapper__wrapper">
 				<div className="Wrapper__title">
 					<Typography id={`${componentId}-title`} content={title} size="lg" bold />
+					{header}
 				</div>
 				<div
 					className="Wrapper__content"
@@ -33,6 +34,7 @@ const Wrapper = (props) => {
 Wrapper.prototypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string,
+	header: PropTypes.element,
 	content: PropTypes.element,
 	height: PropTypes.number,
 };
