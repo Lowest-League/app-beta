@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import classnames from 'classnames';
 
 // STYLE
 import './style.scss';
@@ -10,39 +11,33 @@ import { RightIcon } from '@icons';
 
 const Breadcrumb = () => {
 	const uiStore = useSelector((store) => store.ui);
-	const links = uiStore.links;
+	const links = uiStore.breadcrumb;
 
 	const containerId = 'breadcrumb';
 
 	function setLink(link) {
 		const { url, label } = link;
-		if (!url.length)
-			return (
-				<span className="Breadcrumb__label">
-					<Typography id={`${containerId}-${label}-link`} content={label} />
-				</span>
-			);
 		return (
-			<span className="Breadcrumb__label" onClick={() => location.replace(url)}>
+			<span className={classnames('Breadcrumb__label', { 'Breadcrumb__label--disabled': !url.length })} onClick={() => location.replace(url)}>
 				<Typography id={`${containerId}-${label}-link`} content={label} />
 			</span>
 		);
 	}
 
 	function render() {
-		return !links ? null : (
+		return !links || !links.length ? null : (
 			<ul className="Breadcrumb" id={containerId} data-testid={containerId}>
 				{links.map((link, index) => {
 					if (links.length > 1 && index < links.length - 1)
 						return (
 							<li key={`${index}-link`} className="Breadcrumb__link">
-								{setLink(link, index)} &nbsp;{' '}
+								{setLink(link)} &nbsp;{' '}
 								<RightIcon className="Breadcrumb__icon" width={12} height={16} /> &nbsp;
 							</li>
 						);
 					return (
 						<li className="Breadcrumb__link" key={`${index}-link`}>
-							{setLink(link, index)}
+							{setLink(link)}
 						</li>
 					);
 				})}
