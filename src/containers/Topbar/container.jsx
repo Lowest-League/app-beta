@@ -8,6 +8,7 @@ import { logout } from '@utils';
 import './style.scss';
 
 // COMPONENTS
+import { Breadcrumb } from '@containers';
 import { UserNav } from '@components';
 
 const Topbar = () => {
@@ -20,6 +21,7 @@ const Topbar = () => {
 			<div className="Topbar__content">
 				<UserNav user={user} logout={() => logout(dispatch)} />
 			</div>
+			<div className="Topbar__breadcrumb"><Breadcrumb /></div>
 		</div>
 	);
 
