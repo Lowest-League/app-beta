@@ -23,7 +23,7 @@
 	}
 
 	&__form {
-		padding: 0 $horizontal-padding;
+		padding: 0 $padding-horizontal;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -46,7 +46,7 @@
 		align-items: center;
 		position: fixed;
 		bottom: spacing('lg');
-		right: $horizontal-padding;
+		right: $padding-horizontal;
 		color: $color-light;
 		text-decoration: none;
 		cursor: pointer;
@@ -56,7 +56,7 @@
 		}
 
 		@media (max-width: $breakpoint-mobile) {
-			left: $horizontal-padding;
+			left: $padding-horizontal;
 			color: $color-dark;
 		}
 	}

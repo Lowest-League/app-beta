@@ -7,6 +7,9 @@ import { getLeaguesRequest } from '@store/modules/leagues/requests';
 // STYLE
 import './style.scss';
 
+// STORE
+import { setBreadcrumb } from '@store/modules/ui/actions';
+
 // COMPONENTS
 import { Typography, Wrapper, Loader, Card } from '@components';
 
@@ -23,6 +26,8 @@ const Home = (props) => {
 	const loader = <Loader />;
 
 	useEffect(() => {
+		dispatch(setBreadcrumb([{ label: 'Home', url: '' }]));
+
 		if (!logged) navigate('/');
 		else dispatch(getLeaguesRequest());
 	}, [logged]);

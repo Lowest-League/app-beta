@@ -3,10 +3,18 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: flex;
-	justify-content: flex-end;
+	display: grid;
+	grid-template-rows: repeat(2, auto);
 
 	&__content {
-		padding: spacing('lg') spacing('md');
+		padding: spacing('lg');
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__breadcrumb {
+		padding: 0 $padding-horizontal;
+		display: flex;
+		justify-content: flex-start;
 	}
 }

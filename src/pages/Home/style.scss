@@ -1,14 +1,14 @@
 .Home {
 	width: 100%;
 	height: 100vh;
-	margin-top: $page-margin-top;
+	margin-top: $margin-top-page;
 
 	@media (max-width: $breakpoint-mobile) {
 		grid-template-columns: 100%;
 	}
 
 	&__content {
-		padding: $horizontal-padding;
+		padding: 0 $padding-horizontal;
 	}
 
 	&__header {
