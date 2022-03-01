@@ -1,5 +1,5 @@
-// Breadcrumb template
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 // STYLE
 import './style.scss';
@@ -8,8 +8,9 @@ import './style.scss';
 import { Typography } from '@components';
 import { RightIcon } from '@icons';
 
-const Breadcrumb = (props) => {
-	const { links } = props;
+const Breadcrumb = () => {
+	const uiStore = useSelector((store) => store.ui);
+	const links = uiStore.links;
 
 	const containerId = 'breadcrumb';
 
