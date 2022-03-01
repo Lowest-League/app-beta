@@ -18,7 +18,10 @@ const Breadcrumb = () => {
 	function setLink(link) {
 		const { url, label } = link;
 		return (
-			<span className={classnames('Breadcrumb__label', { 'Breadcrumb__label--disabled': !url.length })} onClick={() => location.replace(url)}>
+			<span
+				className={classnames('Breadcrumb__label', { 'Breadcrumb__label--disabled': !url.length })}
+				onClick={() => location.replace(url)}
+			>
 				<Typography id={`${containerId}-${label}-link`} content={label} />
 			</span>
 		);
