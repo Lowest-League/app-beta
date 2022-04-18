@@ -1,14 +1,21 @@
 import React from 'react';
+import classnames from 'classnames';
 import { Typography } from '@components';
 
 // STYLE
 import './style.scss';
 
 const List = (props) => {
-	const { id, header, items } = props;
+	const { id, title, items, loading } = props;
 
 	function renderHeader() {
-		return header && <div className="List__header">{header}</div>;
+		return (
+			title && (
+				<div className="List__header">
+					<Typography id={`${id}-list-title`} content={title} size="lg" bold />
+				</div>
+			)
+		);
 	}
 
 	function renderItems() {
@@ -20,7 +27,7 @@ const List = (props) => {
 	}
 
 	return (
-		<div className="List" id={id} data-testid={id}>
+		<div className={classnames('List', { 'List--loading': loading })} id={id} data-testid={id}>
 			{renderHeader()}
 			{renderItems()}
 		</div>

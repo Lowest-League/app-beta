@@ -1,3 +1,25 @@
 .List {
-	color: 'red';
+	width: 100%;
+	background: $color-grey-3;
+	border-radius: $border-radius;
+
+	&__header {
+		padding: spacing('lg');
+		padding-bottom: spacing('md');
+	}
+
+	&__ul {
+		padding: spacing('sm') spacing('lg');
+		padding-bottom: spacing('lg');
+		margin: 0;
+		list-style: none;
+
+		display: grid;
+		column-gap: spacing('lg');
+		grid-template-columns: repeat(3, 30%);
+
+		@media (max-width: $breakpoint-mobile) {
+			grid-template-columns: 100%;
+		}
+	}
 }
