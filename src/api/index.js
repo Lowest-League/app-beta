@@ -25,7 +25,7 @@ export const LOAD_USER = () => {
 	const token = window.sessionStorage.getItem('lowestLeagueToken');
 
 	const options = {
-		url: `${Routes.BASE_URL}/${Routes.GET_USER}`,
+		url: `${Routes.BASE_URL}/${Routes.USERS}/load`,
 	};
 
 	const headers = {
@@ -38,7 +38,7 @@ export const LOAD_USER = () => {
 export const LOAD_LEAGUES = () => {
 	const token = window.sessionStorage.getItem('lowestLeagueToken');
 	const options = {
-		url: `${Routes.BASE_URL}/${Routes.GET_LEAGUES}`,
+		url: `${Routes.BASE_URL}/${Routes.USERS}/leagues`,
 	};
 
 	const headers = {
