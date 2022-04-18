@@ -8,14 +8,18 @@ import './style.scss';
 import { FootballLogo } from '@icons';
 
 const Loader = (props) => {
-	const { id } = props;
+	const { id, box } = props;
 	const sizes = '64';
 
 	const componentId = `loader-${id}`;
 
 	return (
 		<div className="Loader" id={componentId} data-testid={componentId}>
-			<FootballLogo className="Loader__icon" width={sizes} height={sizes} />
+			{box ? (
+				<div className="Loader__box" />
+			) : (
+				<FootballLogo className="Loader__icon" width={sizes} height={sizes} />
+			)}
 		</div>
 	);
 };
