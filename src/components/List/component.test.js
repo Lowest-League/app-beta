@@ -5,10 +5,9 @@ import '@testing-library/jest-dom';
 
 import List from './component';
 
-let wrapper = props => <List {...props} />;
+let wrapper = (props) => <List {...props} />;
 
 describe('List', () => {
-
 	it('should render', () => {
 		const { getByText } = render(wrapper());
 

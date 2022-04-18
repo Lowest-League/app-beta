@@ -4,10 +4,9 @@ import '@testing-library/jest-dom';
 
 import Item from './component';
 
-let wrapper = props => <Item {...props} />;
+let wrapper = (props) => <Item {...props} />;
 
 describe('Item', () => {
-
 	it('should render', () => {
 		const props = {
 			id: 'jest-item',
