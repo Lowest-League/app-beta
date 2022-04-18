@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Typography } from '@components';
+import { Typography, Loader } from '@components';
 
 // STYLE
 import './style.scss';
@@ -26,10 +26,27 @@ const List = (props) => {
 		);
 	}
 
+	function cardLoader() {
+		return (
+			<div className="List__loader">
+				<div className="List__loaderLine">
+					<Loader id={'${id}-loader'} box />
+				</div>
+				<div className="List__loaderLine">
+					<Loader id={'${id}-loader'} box />
+				</div>
+				<div className="List__loaderLine">
+					<Loader id={'${id}-loader'} box />
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<div className={classnames('List', { 'List--loading': loading })} id={id} data-testid={id}>
 			{renderHeader()}
-			{renderItems()}
+			{!loading && renderItems()}
+			{loading && cardLoader()}
 		</div>
 	);
 };

@@ -22,4 +22,19 @@
 			grid-template-columns: 100%;
 		}
 	}
+
+	&__loader {
+		padding: spacing('sm') spacing('lg');
+		padding-bottom: spacing('lg');
+		margin: 0;
+		list-style: none;
+
+		display: grid;
+		column-gap: spacing('lg');
+		grid-template-columns: repeat(3, 30%);
+
+		@media (max-width: $breakpoint-mobile) {
+			grid-template-columns: 100%;
+		}
+	}
 }
