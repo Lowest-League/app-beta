@@ -44,6 +44,7 @@ const Home = (props) => {
 						leagues
 							? leagues.map((league) => (
 									<Item
+										key={league.id}
 										id={league.id}
 										content={<Card id={league.id} type="league" data={league} />}
 									/>
