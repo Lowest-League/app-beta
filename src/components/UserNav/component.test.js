@@ -9,6 +9,7 @@ const componentId = 'usernav';
 const user = {
 	id: '007',
 	username: 'Jest',
+	email: 'jest@email.com',
 	leagues: [],
 };
 const click = jest.fn();
@@ -27,7 +28,7 @@ describe('UserNav', () => {
 		const { getByTestId } = render(wrapper(props));
 
 		expect(getByTestId(componentId)).toBeTruthy();
-		expect(getByTestId(`typography-${componentId}-username`).textContent).toBe('Jest');
+		expect(getByTestId(`typography-${componentId}-email`).textContent).toBe('jest@email.com');
 		expect(getByTestId(`${componentId}-logout`)).toBeTruthy();
 		expect(getByTestId(`typography-${componentId}-logout-label`).textContent).toBe('Logout');
 		expect(getByTestId(`typography-${componentId}-user-initials`).textContent).toBe('Je');
