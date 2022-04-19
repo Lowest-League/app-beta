@@ -5,8 +5,7 @@ $photo-size: 40px;
 	padding: spacing('md') spacing('lg');
 	display: flex;
 	align-items: center;
-	background-color: $color-grey-3;
-	border-radius: 50px;
+	border-radius: $border-radius;
 
 	&__photo {
 		width: $photo-size;
