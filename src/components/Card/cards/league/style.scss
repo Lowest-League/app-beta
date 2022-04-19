@@ -36,6 +36,10 @@
 		}
 	}
 
+	&__id {
+		color: $color-grey-2;
+	}
+
 	&__right {
 		padding: spacing('md');
 		display: flex;
