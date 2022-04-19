@@ -10,14 +10,14 @@ import { Typography } from '@components';
 
 const UserNav = (props) => {
 	const { user, logout } = props;
-	const { username } = user;
+	const { username, email } = user;
 
 	const componentId = 'usernav';
 
 	return (
 		<div className="UserNav" id={componentId} data-testid={componentId}>
 			<div className="UserNav__info">
-				<Typography id={`${componentId}-username`} content={username} />
+				<Typography id={`${componentId}-email`} content={email} />
 				<div className="UserNav__logout" onClick={logout} data-testid={`${componentId}-logout`}>
 					<Typography id={`${componentId}-logout-label`} content="Logout" size="sm" italic />
 				</div>

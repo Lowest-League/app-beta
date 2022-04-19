@@ -2,14 +2,11 @@
 	"name": "lowest-league-app",
 	"version": "0.0.1",
 	"main": "index.js",
-	"engines": {
-		"node": "v17.2.0"
-	},
 	"scripts": {
 		"run:dev": "webpack-dev-server --host 0.0.0.0 --port 9090 --mode development --env MODE=dev",
 		"ngrok": "ngrok http 9090 -host-header='localhost:9090'",
-		"docker:start": "docker-compose up -d",
-		"docker:stop": "docker-compose stop",
+		"app:start": "docker-compose up -d",
+		"app:stop": "docker-compose stop",
 		"stories": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook --port 9091",
 		"test:all": "jest --coverage --verbose=true --config ./jest.config.json",
 		"test:watch": "jest --watchAll --coverage --verbose=true --config ./jest.config.json",

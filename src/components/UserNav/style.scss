@@ -2,11 +2,8 @@ $photo-size: 40px;
 
 .UserNav {
 	width: fit-content;
-	padding: spacing('md') spacing('lg');
 	display: flex;
 	align-items: center;
-	background-color: $color-grey-3;
-	border-radius: 50px;
 
 	&__photo {
 		width: $photo-size;

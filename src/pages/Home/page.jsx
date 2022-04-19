@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getLeaguesRequest } from '@store/modules/leagues/requests';
+import { Typography, Card, List, Item } from '@components';
 
 // STYLE
 import './style.scss';
@@ -11,7 +12,6 @@ import './style.scss';
 import { setBreadcrumb } from '@store/modules/ui/actions';
 
 // COMPONENTS
-import { Typography, Wrapper, Loader, Card } from '@components';
 
 const Home = (props) => {
 	const { logged } = props;
@@ -22,8 +22,6 @@ const Home = (props) => {
 	const leaguesStore = useSelector((store) => store.leagues);
 	const leagues = leaguesStore.leagues;
 	const loading = leaguesStore.loading;
-
-	const loader = <Loader />;
 
 	useEffect(() => {
 		dispatch(setBreadcrumb([{ label: 'Home', url: '' }]));
@@ -36,34 +34,22 @@ const Home = (props) => {
 		<div className="Home">
 			<div className="Home__content">
 				<div className="Home__header">
-					<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="xl" />
+					<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="lg" />
 				</div>
-				<Wrapper
+				<List
 					id="home-leagues"
 					title="Leagues"
-					header={
-						leagues && (
-							<Typography
-								id="home-title"
-								content={`${leagues.length} ${leagues.length === 1 ? 'league' : 'leagues'}`}
-								size="sm"
-								italic
-							/>
-						)
-					}
-					height={320}
-					content={
-						leagues ? (
-							leagues.map((league) => (
-								<span key={league.id}>
-									<Card id={league.id} type="league" data={league} />
-								</span>
-							))
-						) : loading ? (
-							loader
-						) : (
-							<Typography id="home-empty" content="No league registered!" size="sm" italic />
-						)
+					loading={loading}
+					items={
+						leagues
+							? leagues.map((league) => (
+									<Item
+										key={league.id}
+										id={league.id}
+										content={<Card id={league.id} type="league" data={league} />}
+									/>
+							  ))
+							: []
 					}
 				/>
 			</div>
