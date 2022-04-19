@@ -34,7 +34,7 @@ const Home = (props) => {
 		<div className="Home">
 			<div className="Home__content">
 				<div className="Home__header">
-					<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="xl" />
+					<Typography id="home-title" content={`Welcome, ${user?.username}.`} size="lg" />
 				</div>
 				<List
 					id="home-leagues"
